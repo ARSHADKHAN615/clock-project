@@ -1,0 +1,79 @@
+ #clock-container {
+     position: relative;
+     margin: auto;
+     width: 40vw;
+     height: 50vw;
+     background: url(clock.png) no-repeat;
+     background-size: 100% 100%;
+ }
+ 
+ body {
+     height: 10000px;
+ }
+ 
+ #hour,
+ #minuter,
+ #seconds,
+ #millisecond {
+     position: absolute;
+     border-radius: 15px;
+ }
+ 
+ #hour {
+     width: 2%;
+     top: 29.9%;
+     left: 48.9%;
+     height: 20%;
+     background-color: violet;
+     /* display: none; */
+     transform-origin: bottom;
+ }
+ 
+ #minuter {
+     width: 2%;
+     left: 48.9%;
+     transform-origin: bottom;
+     top: 20%;
+     background-color: yellow;
+     /* display: none; */
+     height: 30%;
+ }
+ 
+ #seconds {
+     width: 2%;
+     left: 48.9%;
+     top: 18%;
+     background-color: rgb(3, 62, 139);
+     transform-origin: bottom;
+     height: 32%;
+     /* display: none; */
+ }
+ 
+ #millisecond {
+     width: 2%;
+     left: 48.9%;
+     top: 18%;
+     background-color: rgb(16, 20, 26);
+     transform-origin: bottom;
+     height: 32%;
+     /* display: none; */
+ }
+ 
+ .second-clock {
+     width: 100%;
+     margin: 50px auto;
+ }
+ 
+ span {
+     border-radius: 50px;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     padding: 50px;
+     background-color: yellow;
+     color: #000000;
+     font-size: 2rem;
+ }
+ 
+ span:nth-last-child(2) {
+     display: inline-block;
+     width: 50px;
+ }
