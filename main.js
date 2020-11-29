@@ -14,7 +14,6 @@ setInterval(() => {
     hour.style.transform = `rotate(${hRotation}deg)`;
     minuter.style.transform = `rotate(${mRotation}deg)`;
     seconds.style.transform = `rotate(${sRotation}deg)`;
-    // millisecond.style.transform = `rotate(${miRotation}deg)`;    
 }, 1000);
 
 
@@ -32,41 +31,13 @@ setInterval(() => {
         htime = htime - 12;
         en = "PM"
     }
-    if (htime == 0) {
-        htime = 12;
-    }
 
-    if (htime < 10) {
-        htime = "0" + htime;
+    function timeFomat(time) {
+        return time < 10 ? `0${time}` : time;
     }
-    if (mtime < 10) {
-        mtime = "0" + mtime;
-    }
-    if (stime < 10) {
-        stime = "0" + stime;
-    }
-    document.getElementById("hour1").innerHTML = htime;
-    document.getElementById("minuter1").innerHTML = mtime;
-    document.getElementById("seconds2").innerHTML = stime;
+    document.getElementById("hour1").innerHTML = timeFomat(htime);
+    document.getElementById("minuter1").innerHTML = timeFomat(mtime);
+    document.getElementById("seconds2").innerHTML = timeFomat(stime);
     document.getElementById("millisecond2").innerHTML = milli;
     document.getElementById("pm-am").innerHTML = en;
-
-
-
-
 }, 100);
-
-
-
-
-
-window.addEventListener("scroll", function() {
-    let cunt = 0;
-    setInterval(() => {
-        if (cunt < 1000) {
-            cunt++;
-            document.getElementById("cunt").innerHTML = cunt;
-        }
-    },1000);
-
-});
